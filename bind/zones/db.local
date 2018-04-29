@@ -1,0 +1,9 @@
+$ttl 7200
+local.	IN	SOA	local root.local. (
+			20140336
+			172800
+			14400
+			3628800
+			604800 )
+local.	IN	NS	bind
+*        A       10.240.9.2

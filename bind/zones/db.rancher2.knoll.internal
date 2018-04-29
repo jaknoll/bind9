@@ -1,0 +1,15 @@
+$ORIGIN .
+$TTL 7200	; 2 hours
+rancher2.knoll.internal	IN SOA	rancher2.knoll.internal.rancher2.knoll.internal. root.rancher2.knoll.internal. (
+				20140622   ; serial
+				172800     ; refresh (2 days)
+				14400      ; retry (4 hours)
+				3628800    ; expire (6 weeks)
+				604800     ; minimum (1 week)
+				)
+			NS	bind.rancher2.knoll.internal.
+$ORIGIN rancher2.knoll.internal.
+bind			A	10.240.9.2
+$TTL 60	; 1 minute
+external-dns-adminproject TXT	"syncthing.rancher2.knoll.internal."
+syncthing		A	10.240.8.145
